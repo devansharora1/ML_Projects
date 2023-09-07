@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Machine Learning Web App</title>
+</head>
+<body>
+    <h1>Machine Learning Web App</h1>
+
+    <form method="POST">
+
+        <label for="Item_Identifier">Item_Identifier:</label>
+        <input type="number" step="0.01" name="Item_Identifier" required><br>
+
+        <label for="Item_Weight">Item_Weight:</label>
+        <input type="number" step="0.01" name="Item_Weight" required><br>
+
+        <label for="Item_Visibility">Item_Visibility:</label>
+        <input type="number" step="0.01" name="Item_Visibility" required><br>
+
+        <label for="Item_MRP">Item_MRP:</label>
+        <input type="number" step="0.01" name="Item_MRP" required><br>
+
+        <label for="Outlet_Identifier">Outlet_Identifier:</label>
+        <input type="number" step="0.01" name="Outlet_Identifier" required><br>
+
+        <label for="Item_Type">Item_Type:</label>
+        <input type="number" step="0.01" name="Item_Type" required><br>
+
+        <label for="Item_Fat_Content">Item_Fat_Content:</label>
+        <input type="number" step="0.01" name="Item_Fat_Content" required><br>
+
+        <label for="Outlet_Establishment_Year">Outlet_Establishment_Year:</label>
+        <input type="number" step="0.01" name="Outlet_Establishment_Year" required><br>
+
+        <input type="submit" value="Predict">
+    </form>
+
+    {% if prediction %}
+    <h2>Prediction:</h2>
+    <p>{{ prediction }}</p>
+    {% endif %}
+</body>
+</html>
